@@ -14,7 +14,7 @@ public class carSpawner : MonoBehaviour {
 	}
 	void Update () {
         timer -= Time.deltaTime;
-        carNo = Random.Range(0, 5);
+        carNo = Random.Range(0, 7);
         if (timer <= 0)
         {
             Vector3 enemyCarPos = new Vector3(Random.Range(-limitBoundary, limitBoundary), transform.position.y, transform.position.z);
