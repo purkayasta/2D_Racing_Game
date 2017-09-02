@@ -48,6 +48,7 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\carController.cs" />
      <Compile Include="Assets\Scripts\carSpawner.cs" />
+     <Compile Include="Assets\Scripts\destroyerEnemy.cs" />
      <Compile Include="Assets\Scripts\enemyCarMove.cs" />
      <Compile Include="Assets\Scripts\trackMoving.cs" />
  <Reference Include="UnityEngine.UI">
