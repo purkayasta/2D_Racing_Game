@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class carController : MonoBehaviour 
 {
+    public AudioManager am;
     public float carSpeed;
     Vector3 carPosition;
     public float limitBoundary = 2.14f;
+    public UiManager ui;
 	void Start () 
     {
         carPosition = transform.position;
+        am.gameOver.Stop();
+        am.carSound.Play();
 	}
 	void Update () 
     {
@@ -22,6 +26,9 @@ public class carController : MonoBehaviour
         if (coll.gameObject.tag == "Enemy")
         {
             Destroy(gameObject);
+            ui.gameOverAction();
+            am.carSound.Stop();
+            am.gameOver.Play();
         }
             
     }﻿
